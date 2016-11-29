@@ -1,0 +1,45 @@
+CALC    LDA Guess
+        OUT
+        INP
+        BRZ CORRECT
+        INP
+        BRZ TOOLOW
+        BRA TOOHIGH
+TOOLOW  LDA Guess
+        STA Lowest
+        STA LCalc
+        LDA Highest
+        STA HCalc
+        BRA MID
+TOOHIGH LDA Guess
+        STA Highest
+        STA HCalc
+        LDA Lowest
+        STA LCalc
+        BRA MID
+MID     LDA HCalc
+        SUB One
+        STA HCalc
+        LDA LCalc
+        ADD One
+        STA LCalc
+        SUB HCalc
+        BRZ STORE
+        LDA LCalc
+        ADD One
+        SUB HCalc
+        BRZ STORE
+        BRA MID
+STORE   LDA HCalc
+        STA Guess
+        BRA CALC
+CORRECT LDA Guess
+        OUT
+        HLT
+Highest DAT 500
+Lowest  DAT 0
+Guess   DAT 250
+One     DAT 1
+HCalc   DAT 0
+LCalc   DAT 0
+Memory  DAT 0
