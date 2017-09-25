@@ -5,7 +5,9 @@ Guide:
 Pick a number between 1 and 500
 
 When the program starts, it's first guess will be 250. The first input of each round is whether it is correct or not.
+
 1 - Incorrect
+
 0 - Correct
 
 If correct, it will output your number, then end.
