@@ -11,7 +11,9 @@ When the program starts, it's first guess will be 250. The first input of each r
 If correct, it will output your number, then end.
 
 If not, then you can specify whether your number was higher or lower than the guessed number
+
 1 - Too High
+
 0 - Too Low
 
 The program then will calculate a new guess
